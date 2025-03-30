@@ -4,9 +4,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- TODO: fav icon & title -->
+  <!-- TODO: update title -->
   <title>AKO 語音科技</title>
   <script type="module" crossorigin src="./index.js"></script>
+  <link rel="icon" href="./asset/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" crossorigin href="./index.css" />
   <script src="jquery-3.7.1.min.js"></script>
 </head>
@@ -26,26 +27,39 @@
       <a class="nav-item" href="#customers">客戶案例</a>
       <a class="nav-item" href="#about">關於我們</a>
       <a class="nav-item" href="#contact">聯絡我們</a>
-      <!-- TODO: language menu -->
-      <button class="language-button">
-        <img src="/asset/language-icon.png">
-        <div>繁體中文</div>
-      </button>
+      <div class="language-group">
+        <button class="language-button" id="languageButton">
+          <img src="./asset/language-icon.png">
+          <div>繁體中文</div>
+        </button>
+        <div class="language-menu" id="languageMenu">
+          <button class="language-item">繁體中文</button>
+        </div>
+      </div>
     </div>
     <div class="mobile-menu">
-      <button class="close-menu-button">
-        <img src="/asset/close.png">
-      </button>
+      <div class="close-item">
+        <button class="close-menu-button">
+          <img src="./asset/close.png">
+        </button>
+      </div>
       <a class="nav-item" href="#">首頁</a>
       <a class="nav-item" href="#solution">解決方案</a>
       <a class="nav-item" href="#feature">產品特色</a>
       <a class="nav-item" href="#customers">客戶案例</a>
       <a class="nav-item" href="#about">關於我們</a>
       <a class="nav-item" href="#contact">聯絡我們</a>
-      <button class="language-button">
-        <img src="/asset/language-icon.png">
-        <div>繁體中文</div>
-      </button>
+      <div class="language-group">
+        <button class="language-button" id="languageButtonMobile">
+          <img src="./asset/language-icon.png">
+          <div>繁體中文</div>
+        </button>
+        <div class="language-menu-mobile" id="languageMenuMobile">
+          <div class="menu-container">
+            <button class="language-item">繁體中文</button>
+          </div>
+        </div>
+      </div>
     </div>
   </header>
 
@@ -55,7 +69,7 @@
       <h1>革新語音科技，提升客服效率</h1>
       <div class="landing-description">自研 ASR 引擎結合 LLM AI 逐字稿分析，為中小企業 call center 提供高精度的解決方案</div>
     </div>
-    <a class="reserve-button">預約簡報</a>
+    <a class="reserve-button" href="#contact">預約簡報</a>
   </div>
 
   <!-- solution -->
@@ -171,7 +185,6 @@
     <div class="description">
       將每一通客服電話，轉為文字，並利用大型語言模型分析，進行深度質檢，產出報表，協助客服主管每天的工作。
     </div>
-    <!-- TODO: 美化 -->
     <table class="customer-table">
       <thead>
         <tr>
@@ -288,6 +301,18 @@
 
   $(".nav-item").on("click", function () {
     $(".mobile-menu").css("display", "none")
+  })
+
+  $("#languageButton").on("click", function () {
+    $("#languageMenu").toggle();
+  });
+
+  $("#languageMenu").on("click", function () {
+    $("#languageMenu").css("display", "none");
+  })
+
+  $("#languageButtonMobile").on("click", function () {
+    $("#languageMenuMobile").toggle();
   })
 </script>
 
