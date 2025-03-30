@@ -22,11 +22,11 @@
     <div class="navigator">
       <a class="nav-item" href="#">首頁</a>
       <a class="nav-item" href="#solution">解決方案</a>
-      <!-- TODO: update href -->
       <a class="nav-item" href="#feature">產品特色</a>
-      <a class="nav-item" href="#">客戶案例</a>
-      <a class="nav-item" href="#">關於我們</a>
-      <a class="nav-item" href="#">聯絡我們</a>
+      <a class="nav-item" href="#customers">客戶案例</a>
+      <a class="nav-item" href="#about">關於我們</a>
+      <a class="nav-item" href="#contact">聯絡我們</a>
+      <!-- TODO: language menu -->
       <button class="language-button">
         <img src="/asset/language-icon.png">
         <div>繁體中文</div>
@@ -38,11 +38,10 @@
       </button>
       <a class="nav-item" href="#">首頁</a>
       <a class="nav-item" href="#solution">解決方案</a>
-      <!-- TODO: update href -->
       <a class="nav-item" href="#feature">產品特色</a>
-      <a class="nav-item" href="#">客戶案例</a>
-      <a class="nav-item" href="#">關於我們</a>
-      <a class="nav-item" href="#">聯絡我們</a>
+      <a class="nav-item" href="#customers">客戶案例</a>
+      <a class="nav-item" href="#about">關於我們</a>
+      <a class="nav-item" href="#contact">聯絡我們</a>
       <button class="language-button">
         <img src="/asset/language-icon.png">
         <div>繁體中文</div>
@@ -138,7 +137,7 @@
         <img src="./asset/feature/feature-icon-1.png">
         <div class="description">
           基礎質檢、進階質檢：<br>
- 內建開頭語、結尾語檢查，專員態度、客戶滿意度等，由 AI 自動分析並評分。
+          內建開頭語、結尾語檢查，專員態度、客戶滿意度等，由 AI 自動分析並評分。
         </div>
       </div>
       <div class="feature-block">
@@ -152,8 +151,8 @@
       <div class="feature-block">
         <img src="./asset/feature/feature-icon-3.png">
         <div class="description">
-          自定義文字分析、客戶訴求、交易分析、客戶分析： 
-只要用 Excel 撰寫質檢規則、交易分析規則、客戶屬性重點等，系統自動利用大語言模型進行分析，產出統計報表。
+          自定義文字分析、客戶訴求、交易分析、客戶分析：
+          只要用 Excel 撰寫質檢規則、交易分析規則、客戶屬性重點等，系統自動利用大語言模型進行分析，產出統計報表。
         </div>
       </div>
       <div class="feature-block">
@@ -164,6 +163,117 @@
       </div>
     </div>
   </div>
+
+  <!-- customers -->
+  <div class="customers" id="customers">
+    <h2>客戶案例</h2>
+    <div class="customer-name">大大寬頻、TBC</div>
+    <div class="description">
+      將每一通客服電話，轉為文字，並利用大型語言模型分析，進行深度質檢，產出報表，協助客服主管每天的工作。
+    </div>
+    <!-- TODO: 美化 -->
+    <table class="customer-table">
+      <thead>
+        <tr>
+          <th></th>
+          <th>人工質檢</th>
+          <th>導入 AI 質檢後</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>每天可質檢的電話通數</td>
+          <td>
+            < 1%</td>
+          <td>10% ~ 100%</td>
+        </tr>
+        <tr>
+          <td>質檢一通電話的時間</td>
+          <td>10 分鐘</td>
+          <td>背景進行</td>
+        </tr>
+        <tr>
+          <td>質檢評分標</td>
+          <td>不容易一致</td>
+          <td>AI 一致性</td>
+        </tr>
+        <tr>
+          <td>客人抱怨警示</td>
+          <td>由客服人員通報</td>
+          <td>100% 自動檢查、自動通報</td>
+        </tr>
+        <tr>
+          <td>質檢統計報表</td>
+          <td>人工整理</td>
+          <td>自動產出</td>
+        </tr>
+        <tr>
+          <td>調聽音檔</td>
+          <td>全程聆聽</td>
+          <td>可先查看文字摘要、搜尋字串，重點聆聽</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="customer-name">國泰世華銀行</div>
+    <div class="description">
+      使用語音辨識引擎，對國語、台語進行逐字稿產出，2024 全年進行超過 1,000 萬通錄音轉文字。</div>
+  </div>
+
+  <!-- about -->
+  <div class="about" id="about">
+    <h2>關於我們</h2>
+    <div class="description">
+      喬治歐威爾的名著，一九八四，<br>
+      描繪在未來世界中，"老大哥"監控著一切。<br>
+      一九八四股份有限公司，<br>
+      於2019年在台北成立，<br>
+      產品橫跨文字、影像、語音的 AI 辨識、分析，<br>
+      我們期望成為一個 AI 老大哥 :<br>
+      協助企業運用 AI 於文字、影像、語音分析，<br>
+      提升服務客戶品質，<br>
+      不僅改善每天的工作效率，<br>
+      更要能做到以前無法想像的 AI 服務。
+    </div>
+  </div>
+
+  <!-- contact -->
+  <div class="contact" id="contact">
+    <h2>聯絡我們</h2>
+    <div class="inputs">
+      <div class="input-group">
+        <div class="title">
+          <span class="required">*</span>
+          <span>稱呼</span>
+        </div>
+        <input type="text">
+      </div>
+      <div class="input-group">
+        <div class="title">
+          <span class="required">*</span>
+          <span>電子信箱</span>
+        </div>
+        <input type="email">
+      </div>
+      <div class="input-group">
+        <div class="title">
+          <span>聯絡電話</span>
+        </div>
+        <input type="tel">
+      </div>
+    </div>
+    <button class="contact-submit-button">提交</button>
+  </div>
+
+  <!-- footer -->
+  <footer>
+    <div class="company-name">
+      地端解決方案合作廠商 : 山穎科技股份有限公司
+    </div>
+    <div class="copyright">
+      Copyright © 2025 一九八四股份有限公司. All rights reserved.
+    </div>
+  </footer>
 
 </body>
 
