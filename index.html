@@ -1,14 +1,184 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React + TS</title>
-    <script type="module" crossorigin src="./assets/index.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index.css">
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- TODO: fav icon & title -->
+  <title>AKO 語音科技</title>
+  <script type="module" crossorigin src="./index.js"></script>
+  <link rel="stylesheet" crossorigin href="./index.css" />
+  <script src="jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+  <!-- header -->
+  <header class="header">
+    <img src="./asset/logo.png" class="logo" alt="AKO 語音科技 logo">
+    <img src="./asset/logo-sm.png" class="logo-sm" alt="AKO 語音科技 logo">
+    <button class="menu-button" id="menuButton">
+      <img src="./asset/menu.png">
+    </button>
+    <div class="navigator">
+      <a class="nav-item" href="#">首頁</a>
+      <a class="nav-item" href="#solution">解決方案</a>
+      <!-- TODO: update href -->
+      <a class="nav-item" href="#feature">產品特色</a>
+      <a class="nav-item" href="#">客戶案例</a>
+      <a class="nav-item" href="#">關於我們</a>
+      <a class="nav-item" href="#">聯絡我們</a>
+      <button class="language-button">
+        <img src="/asset/language-icon.png">
+        <div>繁體中文</div>
+      </button>
+    </div>
+    <div class="mobile-menu">
+      <button class="close-menu-button">
+        <img src="/asset/close.png">
+      </button>
+      <a class="nav-item" href="#">首頁</a>
+      <a class="nav-item" href="#solution">解決方案</a>
+      <!-- TODO: update href -->
+      <a class="nav-item" href="#feature">產品特色</a>
+      <a class="nav-item" href="#">客戶案例</a>
+      <a class="nav-item" href="#">關於我們</a>
+      <a class="nav-item" href="#">聯絡我們</a>
+      <button class="language-button">
+        <img src="/asset/language-icon.png">
+        <div>繁體中文</div>
+      </button>
+    </div>
+  </header>
+
+  <!-- landing -->
+  <div class="landing">
+    <div class="text-group">
+      <h1>革新語音科技，提升客服效率</h1>
+      <div class="landing-description">自研 ASR 引擎結合 LLM AI 逐字稿分析，為中小企業 call center 提供高精度的解決方案</div>
+    </div>
+    <a class="reserve-button">預約簡報</a>
+  </div>
+
+  <!-- solution -->
+  <div id="solution" class="solution">
+    <h2>產品與解決方案</h2>
+    <div class="solution-group">
+      <div class="solution-block">
+        <img src="./asset/production/solution-1.png">
+        <div class="description">
+          強調高準確率、國台語適配<br>並搭配客戶場景<br>（DMG 畫面擷取去個資）
+        </div>
+      </div>
+      <div class="solution-block">
+        <img src="./asset/production/solution-2.png">
+        <div class="description">
+          透過大語言模型<br>
+          進行文本分類、情感判斷、<br>
+          重點摘錄等技術<br>
+          幫助企業快速獲得對話內容洞察<br>
+        </div>
+      </div>
+    </div>
+
+    <!-- video -->
+    <!-- TODO: update video -->
+    <img src="./asset/video.gif" class="video"></img>
+
+    <div class="screen-shot-group">
+      <div class="screen-shot-block">
+        <div class="title">
+          <img src="./asset/production/triangle.png">
+          <span>主畫面</span>
+        </div>
+        <img src="./asset/production/screen-shot-1.png">
+      </div>
+      <div class="screen-shot-block">
+        <div class="title">
+          <img src="./asset/production/triangle.png">
+          <span>自訂質檢</span>
+        </div>
+        <img src="./asset/production/screen-shot-2.png">
+      </div>
+      <div class="screen-shot-block">
+        <div class="title">
+          <img src="./asset/production/triangle.png">
+          <span>敏感詞上下文搜尋</span>
+        </div>
+        <img src="./asset/production/screen-shot-3.png">
+      </div>
+      <div class="screen-shot-block">
+        <div class="title">
+          <img src="./asset/production/triangle.png">
+          <span>敏感詞警示信件</span>
+        </div>
+        <img src="./asset/production/screen-shot-4.png">
+      </div>
+      <div class="screen-shot-block">
+        <div class="title">
+          <img src="./asset/production/triangle.png">
+          <span>逐字稿對話視窗</span>
+        </div>
+        <img src="./asset/production/screen-shot-5.png">
+      </div>
+      <div class="screen-shot-block">
+        <div class="title">
+          <img src="./asset/production/triangle.png">
+          <span>自訂質檢統計報表</span>
+        </div>
+        <img src="./asset/production/screen-shot-6.png">
+      </div>
+    </div>
+  </div>
+
+  <!-- feature -->
+  <div class="feature" id="feature">
+    <h2 class="feature-title">產品特色</h2>
+    <div class="feature-group">
+      <div class="feature-block">
+        <img src="./asset/feature/feature-icon-1.png">
+        <div class="description">
+          基礎質檢、進階質檢：<br>
+ 內建開頭語、結尾語檢查，專員態度、客戶滿意度等，由 AI 自動分析並評分。
+        </div>
+      </div>
+      <div class="feature-block">
+        <img src="./asset/feature/feature-icon-2.png">
+        <div class="description">
+          自行定義敏感詞，遇敏感詞自動 email 通知。
+        </div>
+      </div>
+    </div>
+    <div class="feature-group">
+      <div class="feature-block">
+        <img src="./asset/feature/feature-icon-3.png">
+        <div class="description">
+          自定義文字分析、客戶訴求、交易分析、客戶分析： 
+只要用 Excel 撰寫質檢規則、交易分析規則、客戶屬性重點等，系統自動利用大語言模型進行分析，產出統計報表。
+        </div>
+      </div>
+      <div class="feature-block">
+        <img src="./asset/feature/feature-icon-4.png">
+        <div class="description">
+          自動貼標，幫每一份逐字稿貼上標籤，一目瞭然每一通電話的重點。(2025/Q2)
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+<script>
+  $("#menuButton").on("click", function () {
+    $(".mobile-menu").css("display", "block")
+  })
+
+  $(".close-menu-button").on("click", function () {
+    $(".mobile-menu").css("display", "none")
+  })
+
+  $(".nav-item").on("click", function () {
+    $(".mobile-menu").css("display", "none")
+  })
+</script>
+
 </html>
