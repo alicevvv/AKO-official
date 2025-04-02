@@ -372,6 +372,7 @@ button {
 
   .video {
     width: 60vw;
+    max-width: 900px;
     padding: 120px 0;
 
     @media (max-width: 600px) {
